@@ -1,0 +1,596 @@
+
+:root{
+    --bg:#fff2b2 ;
+    --card:#fff59d; 
+    --ink:#fbeedd;
+    --mut:#c4a68c;
+    --pri:#654620;
+    --pri2:#ffc233;
+    --ln:#4a3324;
+    --chip:#3b2718;
+
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px)}
+
+    @media (prefers-color-scheme:dark)
+{:root:not([data-theme="light"])
+    {   --bg:#fff2b2 ;
+        --card:#fff59d; 
+        --pri:#654620;
+        --pri2:#ffc233;
+        --ln:#4a3324;
+        --chip:#3b2718}}
+
+
+
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"Poppins","Segoe UI",system-ui,sans-serif;
+    line-height:1.5
+    }
+
+h1,h2,h3{
+    text-align: center;
+    font-family:"Playfair Display",Georgia,serif;
+    margin:0;
+    color:#323052;
+    }
+
+nav{
+    position:sticky;
+    top:env(safe-area-inset-top,0px);
+    z-index:20;
+    background:#ffe08a;
+    border-bottom: 1px solid #ffe08a;
+    display:flex;gap:6px;align-items:center;
+    padding:8px 14px;
+    overflow-x:auto
+    }
+
+nav b{
+    font-family:Georgia,serif;
+    font-size:20px;
+    color:var(--pri);
+    margin-right:auto;
+    white-space:nowrap
+    }
+
+nav a{
+    color:#4a2424;
+    text-decoration:none;
+    font-size:13px;
+    padding:6px 10px;
+    border-radius:99px;
+    white-space:nowrap
+    }
+
+nav a:hover{
+    background:#fff6b1;
+    }
+
+.hero{
+    
+    background:linear-gradient(135deg,#a8c6e7,#fff2b2);
+    color:#654620;
+    padding:56px 20px 70px;
+    text-align:center;
+    position:relative;
+    overflow:hidden
+    }
+
+.hero h1{
+    font-size:clamp(34px,7vw,60px);
+    color:#3b2718
+    }
+
+.hero p{
+    max-width:560px;
+    margin:10px auto 22px;
+    opacity:.95
+    }
+
+.hero .fl{
+    position:absolute;
+    font-size:44px;
+    opacity:.25;
+    animation:fl 6s ease-in-out infinite
+    }
+
+@keyframes 
+fl{50%{transform:translateY(-14px) rotate(8deg)}}
+
+/*jelajah*/ 
+.btn{
+    background:#ffeb79;
+    color:#4a2424;
+    border:0;
+    padding:11px 22px;
+    border-radius:99px;
+    font-weight:700;
+    font-size:14px;
+    text-decoration:none;
+    display:inline-block
+}
+
+.btn:hover{
+    background-color: #ffff;
+    color: #55533f;
+}
+
+.btn.s{
+    background:var(--pri);
+    color:#fff;
+    padding:8px 14px;
+    font-size:13px
+}
+
+main{
+    max-width:1100px;
+    margin:0 auto;
+    padding:0 16px
+}
+
+section{
+    padding:34px 0}
+
+/* text judul */
+h2{
+    font-size:28px;
+    margin-bottom:4px;
+    color:#8a3b08;
+}
+
+.sub{  
+    text-align: center;
+    color:#8a3b08;
+    margin:0 0 16px;
+    font-size:14px
+}
+
+#khasg .sub {
+    color: #0b1431;
+}
+
+#peta .sub {
+    color :#8a3b08;
+}
+
+.bar{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    background:var(--card);
+    border:1px solid var(--ln);
+    padding:12px;border-radius:16px;
+    margin-top:-34px;position:relative;
+    box-shadow:0 8px 24px rgba(161, 14, 14, 0.133)
+}
+
+/*place holder*/
+input,select{
+    font:inherit;
+    padding:9px 12px;
+    border-radius:10px;
+    border:1px solid var(--ln);
+    background: #ffe08a; 
+    color:#fbeedd;
+}
+
+.bar input{
+    flex:2 1 200px}
+
+.bar select{
+    flex:1 1 130px}
+
+.chips{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    margin:14px 0
+}
+
+.chip{
+    border:1px solid #4a2424;
+    background:#7fa8d6;
+    color:var(--ink);
+    padding:6px 14px;
+    border-radius:99px;
+    cursor:pointer;
+    font-size:13px
+}
+
+.chip.on{
+    background:#403558;
+    color:#ffffff;
+    border-color:var(--pri)
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+    gap:16px
+}
+
+/* kotak menu */
+.card{
+   background:linear-gradient(135deg,#a8c6e7,#fff2b2);
+    border:1px solid var(--ln);
+    border-radius:18px;
+    overflow:hidden;
+    cursor:pointer;
+    transition:.2s
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 24px #0002
+}
+
+.ph{
+    height:120px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:56px;
+    position:relative
+}
+
+/* FOTO KARTU KULINER */
+.food-photo {
+  height: 160px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.food-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-fallback {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 56px;
+  background: linear-gradient(135deg, #a8c6e7, #fff2b2);
+}
+
+/* Foto pada bagian Kuliner Khas Tangerang */
+.khas .e {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.khas .e img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.khas .box:hover .e img {
+  transform: scale(1.05);
+}
+
+.khas .foto-fallback {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background: #dce8f5;
+  color: #4a2424;
+  font-size: 14px;
+}
+
+/*tombol fav*/
+.ph .fav{
+    position:absolute;
+    top:8px;
+    right:8px;
+    background:#fffc;
+    border:0;
+    border-radius:50%;
+    width:34px;
+    height:34px;
+    font-size:17px;
+    cursor:pointer
+}
+
+.cb{
+    padding:12px 14px}
+
+.cb h3{font-size:17px; color:#4a3324 ;}
+
+/* lokasi dan jam */
+.meta{
+    font-size:12px;
+    color:#4a3324}
+
+.tag{
+    display:inline-block;
+    background:var(--chip);
+    border-radius:99px;
+    font-size:11px;
+    padding:2px 9px;
+    margin-right:4px
+}
+
+.price{
+    color:#4a3324;
+    font-weight:700;
+    font-size:14px
+}
+
+.map{
+    background:#ffff;
+    border:1px solid var(--ln);
+    border-radius:18px;
+    overflow:hidden
+}
+
+svg{
+    display:block;
+    width:100%;
+    height:auto
+}
+
+.pin{cursor:pointer}
+
+.pin text{font-size:15px ;
+    color:#67808f;
+}
+
+.box{
+    background:#a8c6e7;
+    border:1px solid var(--ln);
+    border-radius:18px;
+    padding:16px
+}
+
+#umkm b {
+    Color: #0b1431;
+}
+
+.khas{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:16px
+}
+
+.khas .box{
+    border-top:5px solid #3e5166}
+
+.khas .e{font-size:42px}
+
+.rec{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+
+ol.rt{padding-left:20px;margin:8px 0}
+
+ol.rt li{margin:6px 0}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 249, 169, 0.667);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    padding: 16px;
+}
+
+.modal.on {
+    display: flex;
+}
+
+.mb {
+    background: #fff7d6;
+    border-radius: 20px;
+    border: 5px solid #fee4b8;
+    max-width: 460px;
+    width: 100%;
+    max-height: 88vh;
+    overflow: auto;
+}
+
+/* card */
+.mb{
+    background:#fff7d6;
+    border-radius:20px;
+    border: 5px solid #fee4b8;
+    max-width:460px;
+    width:100%;
+    max-height:88vh;
+    overflow:auto
+}
+
+.mb .ph{
+    height:140px;
+    font-size:70px;
+}
+
+/* teks card */
+.mb .in{padding:16px 18px; color: #4a3324;}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:14px;
+    color: #4a2424;
+}
+
+td{
+    padding:6px 0;
+    border-bottom:1px dashed #4a3324
+}
+
+td:last-child{
+    text-align:right;
+    color:#4a2424;
+    font-weight:700
+}
+
+footer{
+    text-align:center;
+    padding:26px 16px;
+    color:#4a3324;
+    font-size:12px
+}
+
+/* peta */
+#peta.peta {
+    background: linear-gradient(135deg, #a8c6e7, #fff2b2);
+    width: 100vw;
+    max-width: none;
+    margin-left: calc(50% - 50vw);
+    margin-top: 30px;
+    padding: 35px 20px;
+    box-sizing: border-box;
+}
+
+#peta .mapwrap {
+    display: block;
+    width: 100%;
+    max-width: 1100px;
+    margin: 20px auto 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#peta .map {
+    position: relative;
+    isolation: isolate; /* z-index Leaflet tidak menimpa modal detail */
+    width: 100%;
+    height: 520px;
+    background: #e8eef3;
+    border: 1px solid var(--ln);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, .15);
+}
+
+#peta #lmap {
+    width: 100%;
+    height: 100%;
+}
+
+/* pin */
+.pin2 {
+    width: 38px;
+    height: 38px;
+    background: var(--c, #ffe8cc);
+    border: 3px solid #d9480f;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .35);
+    transition: transform .15s;
+}
+
+.pin2 span {
+    transform: rotate(45deg);
+    font-size: 17px;
+    line-height: 1;
+}
+
+.leaflet-marker-icon:hover .pin2 {
+    transform: rotate(-45deg) scale(1.12);
+}
+
+/* Tampilan HP */
+@media (max-width: 768px) {
+    #peta .map {
+        height: 70vh;
+        min-height: 360px;
+    }
+}
+
+#umkm b {
+    color: #0b1431;
+}
+
+/* About Section */
+.about {
+    padding: 50px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+    margin-top: 30px;
+}
+
+.about-img {
+    flex: 0 0 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img img {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+}
+
+.about .content {
+    flex: 1;
+    min-width: 0;
+}
+
+.about .content h3 {
+    color: #654620;
+    font-size: 25px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.about .content p {
+    color: #654620;
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 12px;
+}
+
+/* Tampilan HP */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .about-img {
+        flex: 1;
+    }
+
+    .about-img img {
+        max-width: 260px;
+    }
+
+    .about .content h3 {
+        text-align: center;
+    }
+}
