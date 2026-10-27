@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Culinary Tang – Jelajah Kuliner Tangerang</title>
+
+<link rel="stylesheet" 
+      href="style.css" />
+
+</head>
+
+
+<body>
+<nav>
+    <b>CulinaryTang🍋</b>
+    <a href="#jelajah">Jelajah</a>
+    <a href="#peta">Peta</a>
+    <a href="#khas">Khas</a>
+    <a href="#fav">Favorit</a>
+</nav>
+
+<header class="hero">
+<span class="fl" style="left:6%;top:18%">🍢</span><span class="fl" style="right:8%;top:14%;animation-delay:1s">🍤</span>
+<span class="fl" style="left:14%;bottom:12%;animation-delay:2s">🥟</span>
+<span class="fl" style="right:16%;bottom:10%;animation-delay:3s">☕</span>
+ 
+        <h1>Culinary Tang</h1>
+        <p>Temukan rasa asli Kota Tangerang: dari laksa legendaris sampai UMKM kuliner kekinian, semua dalam satu peta.</p>
+        <a class="btn" href="#jelajah">Mulai Jelajah</a>
+    
+</header>
+
+<main>
+<div class="bar" id="jelajah">
+<input id="q" placeholder="🔍 Cari nama, menu, atau lokasi…">
+<select id="area"><option value="">Semua lokasi</option></select>
+<select id="hrg"><option value="999999">Semua harga</option><option value="15000">≤ Rp15.000</option><option value="30000">≤ Rp30.000</option><option value="50000">≤ Rp50.000</option><option value="100000">≤ Rp100.000</option></select>
+</div>
+<div class="chips" id="cats"></div>
+<div class="grid" id="list"></div>
+
+<!-- peta kuliner -->
+<section id="peta" class="peta">
+    <h2>Peta Kuliner</h2>
+
+    <p class="sub">
+        Ketuk pin untuk melihat detail tempat.
+        Gunakan tombol "Buka di Google Maps" untuk lokasi presisi.
+    </p>
+
+    <div class="mapwrap">
+        <div class="map">
+            <div id="lmap"></div>
+        </div>
+    </div>
+</section>
+<!-- peta kuliner end -->
+
+<section id="khas"><h2>Kuliner Khas Tangerang 🏮</h2><p class="sub">Warisan rasa yang membentuk identitas kota.</p><div class="khas" id="khasg"></div></section>
+
+ <!-- Kartu kuliner akan dibuat melalui JavaScript -->
+        <div class="food-grid" id="foodGrid"></div>
+    </section>
+
+<section id="fav"><h2>Favoritku ❤️</h2><p class="sub">Tersimpan di perangkat ini.</p><div class="grid" id="favout"></div></section>
+</main>
+
+<!-- About section start -->
+    ```html
+<section id="about" class="about">
+    <h2>ABOUT CULINARYTANG</h2>
+
+    <div class="about-container">
+        <div class="about-img">
+            <img src="logo.png" alt="Logo CulinaryTang">
+        </div>
+
+        <div class="content">
+            <h3>Satu Kota, Banyak Cerita Rasa</h3>
+
+            <p>
+                Culinary Tang adalah platform digital yang mengajak kamu
+                menjelajahi kekayaan kuliner Kota Tangerang dengan cara yang
+                lebih mudah dan menyenangkan. Dari laksa khas yang gurih,
+                sate bandeng, dan jajanan pasar tradisional sampai kafe
+                kekinian, semua ada dalam satu tempat.
+            </p>
+
+            <p>
+                Lewat peta kuliner, pencarian dan filter harga, rekomendasi
+                sesuai selera, serta rute kuliner, kamu bisa menemukan tempat
+                makan yang pas dengan anggaran dan suasana hatimu.
+            </p>
+
+            <p>
+                Kami percaya kuliner adalah bagian dari identitas lokal.
+                Karena itu, CulinaryTang juga memperkenalkan makanan khas
+                Tangerang beserta cerita dan keunikannya.
+            </p>
+        </div>
+    </div>
+</section>
+```
+    <!-- About section end -->
+<footer>© 2026 Culinary Tang · Created by Aulia dan Elsa.</footer>
+<div class="modal" id="md"><div class="mb" id="mb"></div></div>
+
+<!-- My Javascript -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+     <script src="script.js"></script> 
+</body>
+</html>
